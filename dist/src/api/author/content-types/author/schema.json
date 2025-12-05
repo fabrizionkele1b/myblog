@@ -1,0 +1,42 @@
+{
+    "kind": "collectionType",
+    "collectionName": "authors",
+    "info": {
+        "singularName": "author",
+        "pluralName": "authors",
+        "displayName": "Authors"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "articles": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::article.article",
+            "mappedBy": "author"
+        },
+        "Name": {
+            "type": "string"
+        },
+        "Bio": {
+            "type": "richtext"
+        },
+        "avatar": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "Redes": {
+            "type": "component",
+            "component": "author.social-links",
+            "repeatable": true
+        }
+    }
+}

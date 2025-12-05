@@ -1,0 +1,36 @@
+{
+    "kind": "singleType",
+    "collectionName": "seo_settings",
+    "info": {
+        "singularName": "seo-setting",
+        "pluralName": "seo-settings",
+        "displayName": "SEO Setting"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "metaTitle": {
+            "type": "string"
+        },
+        "metaDescription": {
+            "type": "text"
+        },
+        "shareImage": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "keywords": {
+            "type": "component",
+            "component": "articles.keywords",
+            "repeatable": true
+        }
+    }
+}
